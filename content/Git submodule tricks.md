@@ -1,6 +1,6 @@
 ---
 title: Git submodule tricks
-date: 2024-02-15
+date: 2024-02-14
 description: 
 tags:
   - git

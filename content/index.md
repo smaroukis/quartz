@@ -2,9 +2,9 @@
 title: Recent
 ---
 
-2024-02-15 [[Git submodule tricks]]
-
 2024-02-15 [[A better shebang]]
+
+2024-02-14 [[Git submodule tricks]]
 
 2024-02-09 [[STM32CubeIDE - live expression viewer doesn't work for variables stored on the stack]]
 
