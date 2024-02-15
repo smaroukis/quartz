@@ -2,6 +2,8 @@
 title: Recent
 ---
 
+2024-02-15 [[Test Add-Delete]]
+
 2024-02-15 [[A better shebang]]
 
 2024-02-14 [[Git submodule tricks]]
