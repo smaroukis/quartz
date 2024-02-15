@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Requires:
 # - ./index_base.md
 # - Folder path e.g. ../content
@@ -35,17 +35,15 @@ exclude_filters=(
     "index.md"
 )
 
-script_dir=$(pwd)
-content_dir="../content"
 
 # Check if the provided path is a directory
-if [ ! -d "$content_dir" ]; then
-    echo "Error: $content_dir is not a directory."
+if [ ! -d "$CONTENT_DIR" ]; then
+    echo "Error: $CONTENT_DIR is not a directory."
     exit 1
 fi
 
 # Move into the specified directory
-cd "$content_dir" || exit
+cd "$CONTENT_DIR" || exit
 
 # Initialize an array to store the file names and creation dates
 declare -a files
@@ -76,16 +74,16 @@ for file in "${selected_files[@]}"; do
     files+=("$date [[$fname]]")
 
     # Print the front matter for inspection
-    echo "Front Matter for $file:"
-    echo "$front_matter"
-    echo ""
+    # echo "Front Matter for $file:"
+    # echo "$front_matter"
+    # echo ""
 done
 
 # Sort the array by creation date in descending order
 IFS=$'\n' sorted=($(sort -r <<<"${files[*]}"))
 
 # Read the contents of index_base.md from the script directory
-base_content=$(<"$script_dir/index_base.md")
+base_content=$(<"$SCRIPT_DIR/index_base.md")
 base_content+=$'\n\n'
 
 # Append the sorted titles to the base content
@@ -94,8 +92,8 @@ for item in "${sorted[@]}"; do
 done
 
 # Write the final content to index.md in the provided directory
-echo "$base_content" > "$content_dir/index.md"
-echo "Index.md has been created with the titles of .md files in $content_dir"
+echo "$base_content" > "$CONTENT_DIR/index.md"
+echo "Index.md has been created with the titles of .md files in $CONTENT_DIR"
 
 # Return to the original directory where the script was run from
-cd "$script_dir" || exit
+cd "$SCRIPT_DIR" || exit
