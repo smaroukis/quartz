@@ -29,7 +29,6 @@ ticks = np.arange(1, np.max(df1['satellites'])+1)
 
 
 Input
-==TODO== Full code
 ```python
 bin_edges = np.arange(1, (np.max(df1['satellites']+2)))-0.5  
 ticks = np.arange(1, (np.max(df1['satellites'])+1))
