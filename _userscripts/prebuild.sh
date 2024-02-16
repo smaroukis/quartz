@@ -8,21 +8,28 @@ BASE_DIR="$GITHUB_WORKSPACE"
 SCRIPT_DIR="$BASE_DIR/_userscripts"
 CONTENT_DIR="$BASE_DIR/content"
 
-git config --global user.name "[bot]"
-git config --global user.email "$EMAIL" # set this in the GH repo
+git config --global user.name "$GIT_USER"
+git config --global user.email "$GIT_EMAIL" # set this in the GH repo
+
+# Step 0: Initialize submodule
+# should be done in the github actions workflow
 
 # Step 1: Switch to main branch in quartz/content submodule and pull updates
 cd $CONTENT_DIR
-echo "Updating content (main branch)"
+# HERE - not getting the submodule?
+echo "🍿 Updating content (main branch)..."
 git checkout main  # make sure we're on main and not the publish branch
 git pull origin main # get new content
 # exit if issue
 
 pushd $SCRIPT_DIR >> /dev/null
+echo "🍿 Building New Index..."
 source makeindex.sh # build new index
 popd >> /dev/null
 # Don't think we need unless we want to update main
+echo "🍿 Adding files `git add -u`..."
 git add -u
+echo "🍿 Commiting files..."
 git commit -m 'auto commit new index'
 # TODO Need to handle permissions here
 
