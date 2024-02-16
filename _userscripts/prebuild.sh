@@ -10,6 +10,8 @@ CONTENT_DIR="$BASE_DIR/content"
 
 git config --global user.name "$GIT_USER"
 git config --global user.email "$GIT_EMAIL" # set this in the GH repo
+# or do
+# git config --global credential.helper store
 
 # Step 0: Initialize submodule
 # should be done in the github actions workflow
@@ -18,6 +20,7 @@ git config --global user.email "$GIT_EMAIL" # set this in the GH repo
 cd $CONTENT_DIR
 # HERE - not getting the submodule?
 echo "🍿 Updating content (main branch)..."
+git remote -vv
 git checkout main  # make sure we're on main and not the publish branch
 git pull origin main # get new content
 # exit if issue
