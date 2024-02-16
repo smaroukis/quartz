@@ -3,8 +3,7 @@ name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches:
-      - main
-      - userscripts
+      - none
  
 permissions:
   contents: read
@@ -28,7 +27,7 @@ jobs:
         run: ./_userscripts/prebuild.sh
         env: 
           GITHUB_WORKSPACE: ${{ github.workspace }}
-          EMAIL: ${{ secrets.EMAIL }}
+          EMAIL: ${{ secrets.GIT_EMAIL }}
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
