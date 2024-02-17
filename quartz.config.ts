@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "smaroukis.github.io",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "Templates", ".obsidian", "Utilities"],
     defaultDateType: "created",
     theme: {
       cdnCaching: true,

@@ -9,3 +9,9 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+.vscode/launch.json
+_userscripts/test.sh
+
+# Vault ignores
+content/Templates
+content/Utilities

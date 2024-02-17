@@ -5,16 +5,18 @@ This [Quartz](https://quartz.jzhao.xyz/) fork is for publishing my Today I Learn
 
 ## Notes to Self
 
+**Organization**
+- Source markdown files are in `/content`. 
+- `_userscripts/prebuild.sh` builds a custom index.md page of recent notes
+- For updating Quartz checkout the `v4` branch and merge upstream changes into `main`. 
+
 ### Building
-
-Source markdown is included as a submodule in `/content`. In this directory pull changes from `til-source main` and checkout the `til-source quartz/publish` branch. Then merge changes from `main`→`publish` and build the new `/content/index.md` file with the scripts in `/_userscripts`. 
-
-Then back in the `/` directory push the `/content` changes to the `main` branch. The GH-pages site is built upon pushes to `main`.
-
-For updating Quartz look at the `v4` branch and merge upstream changes into `main`. 
-
-Automate all of the above into a github actions workflow upon pushes to `til-source main` to get a one touch workflow.
+- build and deploy is performed via the `.github/workflows/deploy.yml` file which deploys using the actions/deploy-pages@v2 to deploy via Actions (must be set in the repo settings)
+- can be built and served locally using `_userscripts/prebuild.sh`
 
 ### Quartz Configuration
-
 Configure in `quartz.config.ts`.
+
+**Excluded folders and files**:
+- edit in `quartz.config.ts` e.g. `ignorePatterns: ["private", "Templates", ".obsidian", "Utilities"]`
+- also edit the `_userscripts/makeindex.sh` file exclude patterns
