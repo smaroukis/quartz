@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
+# Builds the /content/index.md page with links to the most recent pages
+# If run locally also builds and serves the site with `npx build --serve`
 
 # Requires: 
-# - smaroukis/quartz already checked out, working directory is quartz
-# - userscripts prebuild.sh and makeindex.sh in quartz/_userscripts
+# - quartz repo already checked out, working directory is quartz
+# - makeindex.sh in quartz/_userscripts
+# - base index.md in _userscripts/index_base.md
 # - content stored in quartz/content
 # - for local run need quartz npm dependencies installed
 
@@ -36,11 +39,12 @@ source makeindex.sh # build new index
 popd >> /dev/null
 
 if [ "$GITHUB_ACTIONS" = "true" ]; then
-    echo "🍿 Commit/push new content/index.md..."
-    git add content
-    git commit -m 'auto commit new index'
-    git push origin main
-    # we will build the site in the workflow due to dependencies
+    # Uncomment to push intermediate content with the created index to the repo 
+    # echo "🍿 Commit/push new content/index.md..."
+    # git add content
+    # git commit -m 'auto commit new index'
+    # git push origin main
+    # don't build here, build the site in the workflow due to dependencies
 else
     # serve the site locally
     npx quartz build --serve

@@ -15,3 +15,5 @@ _userscripts/test.sh
 # Vault ignores
 content/Templates
 content/Utilities
+# built by the github actions runner
+content/index.md 
