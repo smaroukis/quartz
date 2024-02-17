@@ -40,6 +40,7 @@ popd >> /dev/null
 
 if [ "$GITHUB_ACTIONS" = "true" ]; then
     # Uncomment to push intermediate content with the created index to the repo 
+    continue
     # echo "🍿 Commit/push new content/index.md..."
     # git add content
     # git commit -m 'auto commit new index'
