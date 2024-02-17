@@ -2,8 +2,6 @@
 title: Recent
 ---
 
-2024-02-17 [[Test from mobile]]
-
 2024-02-15 [[A better shebang]]
 
 2024-02-14 [[Git submodule tricks]]
