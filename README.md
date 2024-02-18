@@ -19,4 +19,5 @@ Configure in `quartz.config.ts`.
 
 **Excluded folders and files**:
 - edit in `quartz.config.ts` e.g. `ignorePatterns: ["private", "Templates", ".obsidian", "Utilities"]`
-- also edit the `_userscripts/makeindex.sh` file exclude patterns
+- edit the `_userscripts/makeindex.sh` file exclude patterns
+- edit in `.gitignore` 

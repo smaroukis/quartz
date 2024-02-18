@@ -29,14 +29,14 @@ jobs:
         run: |
           echo $GITHUB_WORKSPACE
           echo "Current WD:" $(pwd)
-      - name: Show Tree
-        run: |
-          echo "🍿 Tree:"
-          tree -L 2 -I "node_modules|docs|quartz"
       - name: Checkout Quartz
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Fetch all history for git info
+      - name: Show Tree
+        run: |
+          echo "🍿 Tree:"
+          tree -L 2 -I "node_modules|docs|quartz"
       - name: Custom User Prepare Site Scripts
         run: ./_userscripts/prebuild.sh
       - uses: actions/setup-node@v3
