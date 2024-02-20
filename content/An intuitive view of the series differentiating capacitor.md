@@ -10,7 +10,7 @@ math: false
 ---
 Today I learned (or re-learned) a more intuitive way to understand why the falling edge pulse into a series (high-pass/differentiator) capacitor results in a negative output voltage _even when the input voltage is positive_. 
 
-From Learning the Art of Electronics section 2W.2.2 on the response of various RC circuits:
+From Hayes' _Learning the Art of Electronics_ section 2W.2.2 on the response of various RC circuits:
 
 ![[attachments/capacitor-response-highpass.png]]
 > When the input pulse width is close to the RC time constant, we will see the charge/discharge response of the capacitor as a differentiator. 
