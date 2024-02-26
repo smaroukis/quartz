@@ -11,6 +11,8 @@ math: false
 
 Biquinary counting is another way to represent decimal (base-10) digits using a pair of binary (base-2) and quinary (base-5) digits. BCD counters like the 74LS90 separate out the mod-2 and mod-5 counters to allow the user to wire the counter in output modes of binary-coded-decimal counter (typical) or biquinary-coded-decimal (amongst others).
 
+#todo add video of biquinary counter leds
+
 biquinary
 **:** of, based on, being, or relating to a mixed-base system of numbers in which each decimal digit _n_ is represented as a pair of digits _xy_ where _n_ = 5 _x_ + _y_ and _x_ is written in base 2 (binary) as 0 or 1 and _y_ is written in base 5 (quinary) as 0, 1, 2, 3, or 4. 
 
