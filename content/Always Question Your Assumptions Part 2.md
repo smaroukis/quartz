@@ -18,9 +18,9 @@ Of course I didn't.
 
 | Previous Name | New Name | New New Name | Notes |
 | ---- | ---- | ---- | ---- |
-|  | `SDO`/`SDI` | same | For one mode peripheral |
+|  | `SDO`/`SDI` | same | This makes the same mistake of ambiguity as in the `Tx`/`Rx` pins, since in/out depends on your point of reference, so `COPI` is preferred.  |
 | `MOSI`/`MISO` | `COPI`/`CIPO` [^2] | `PICO`/`POCI` | "Controller Out Peripheral In" |
-| SS | CS |  | Chip select |
+| `SS` | `CS` |  | Chip select |
  
 `SDO`/`SDI`:  Serial Data Out / Serial Data In for single role hardware
 `COPI`/`CIPO`: Controller Out Peripheral In / Controller In Peripheral Out
