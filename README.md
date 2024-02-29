@@ -2,6 +2,9 @@
 
 This [Quartz](https://quartz.jzhao.xyz/) fork is for publishing my Today I Learned blog at <https://til.maroukis.net>. It's meant to be a low barrier way to publish micro blog posts about what I'm working on, which works with my notetaking editor of choice [Obsidian](https://obsidian.md).
 
+## Changelog
+- changed `icon.png` and `og-image.png` to custom in `quartz/static`
+
 
 ## Notes to Self
 
