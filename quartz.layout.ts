@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       "About Spencer": "https://maroukis.net/about",
       "Source Code": "https://github.com/smaroukis/quartz",
+      "RSS Feed": "https://til.maroukis.net/index.xml"
     },
   }),
 }
