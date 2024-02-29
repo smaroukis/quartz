@@ -8,7 +8,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "smaroukis.github.io",
+    baseUrl: "til.maroukis.net",
     ignorePatterns: ["private", "Templates", ".obsidian", "Utilities"],
     defaultDateType: "created",
     theme: {
