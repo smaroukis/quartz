@@ -54,7 +54,7 @@ while IFS= read -r file; do
     selected_files+=("$file")
 done < <(select_files)
 
-# Output the selected files
+# Output the selected filenames
 echo "Selected Files:"
 for file in "${selected_files[@]}"; do
     echo " * $file"
@@ -67,9 +67,13 @@ for file in "${selected_files[@]}"; do
 
     front_matter=$(awk '/^---$/ && ++c==1 {next} /^---$/ && c==2 {exit} c' "$file")
     # Extract from frontmatter
+    if [[ "$front_matter" =~ draft:\ ?true ]]; then
+        echo $'\n'+" Skipping '$fname' (draft)"
+        continue
+    fi 
     date=$(echo "$front_matter" | grep "date:" | awk '{print $2}')
     title=$(echo "$front_matter" | grep "title:" | cut -d ':' -f 2- | sed 's/^[[:space:]]*//')
-
+    
     # Store the file name and creation date in the array
     files+=("$date [[$fname]]")
 
