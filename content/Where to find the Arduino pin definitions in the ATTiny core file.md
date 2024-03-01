@@ -2,7 +2,9 @@
 title: Where to find the Arduino pin definitions in the ATTiny core file
 date: 2024-02-27
 description: 
-tags: 
+tags:
+  - electronics
+  - arduino
 slug: 
 draft: true
 math: false

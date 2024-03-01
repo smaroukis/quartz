@@ -8,7 +8,6 @@ slug:
 draft: false
 math: false
 ---
-
 It's pretty crazy that a 5V linear regulator, _powering the display circuitry_, being improperly heat-sinked causes the whole $450 precision power supply to reset. Well I guess it's not so surprising since it is the only regulator powering the digital display, but what's more surprising is that it looks like just a pretty measly black anodized heatsink was grabbed out of the parts bin, "this should work right? I found it over there in my scrap pile". Not that I would do a better job of designing a power supply but even I wrote about this in one of my first TIL posts (see [Linear Regulators Are (not) That Hot](Linear%20Regulators%20Are%20(not)%20That%20Hot.md))
 
 From "EEVblog [#512](https://www.youtube.com/hashtag/512) - Rigol DP832 Bad Design Investigation" →  https://youtu.be/y-KkPLWZJko?si=7UP6E97G2XBQfj-y&t=1566
