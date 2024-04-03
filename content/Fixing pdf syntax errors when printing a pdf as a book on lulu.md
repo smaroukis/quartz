@@ -21,7 +21,7 @@ I confirmed these errors locally in Adobe Acrobat by running the Preflight "Digi
 
 Steps
 1. Download the Acrobat Job Options file from the [lulu website](https://help.lulu.com/en/support/solutions/articles/64000255519-pdf-creation-settings). 
-2. In Acrobate export to PostScript
+2. In Acrobat export to PostScript
 3. Open the Job Option file which should pullup Acrobat Distiller
 4. Open/import the `.ps` file into Distiller and run the `Lulu-Interior-Job-Options` job
 5. Upload the created pdf online
