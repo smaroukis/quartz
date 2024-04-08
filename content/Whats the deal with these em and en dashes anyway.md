@@ -11,14 +11,15 @@ math: false
 ---
 When making a list of keyboard replacement shortcuts for common emojis, math symbols and unicode symbols I wanted to add em and en dashes but I realized I didn't exactly know the usage difference—but you'll see how _dramatic_ of a difference this knowledge makes 😅 (`;sweat`). 
 
-|         | Em Dash                                                      | En Dash                                                                                                                                                  | Hyphen                         |
-| ------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| Symbol  | —                                                            | –                                                                                                                                                        | -                              |
-| Length  | Longest                                                      | Longer                                                                                                                                                   | Short                          |
-| Usage   | Indicates a break or interruption in a sentence.             | - to connect items, such as numbers or ranges.<br>- to replace a hyphen in compound adjectives when at least one of the elements is a two-word compound. | Joins words or parts of words. |
-| Example | "She was running late — she forgot her keys."                | "Pages 10–15 are missing from the document." <br>"the post–Cold War era"<br>                                                                             | "Self-confidence"              |
-| Notes   | Typ. replaced by two dashes `--` in word processing software | Requires manually inserting a special character                                                                                                          | Can replace en-dash in things such as ranges since it is the default in word processors                               |
+|         | Em Dash                                                      | En Dash                                                                                                                                                   | Hyphen                                                                                  |
+| ------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Symbol  | —                                                            | –                                                                                                                                                         | -                                                                                       |
+| Length  | Longest                                                      | Longer                                                                                                                                                    | Short                                                                                   |
+| Usage   | Indicates a break or interruption in a sentence.             | - to connect items, such as numbers or ranges.<br>- to replace a hyphen in compound adjectives when at least one of the elements is a two-word compound. | Joins words or parts of words.                                                          |
+| Example | "She was running late — she forgot her keys."                | "Pages 10–15 are missing from the document." <br>"the post–Cold War era"<br>                                                                              | "Self-confidence"                                                                       |
+| Notes   | Typ. replaced by two dashes `--` in word processing software | Requires manually inserting a special character                                                                                                           | Can replace en-dash in things such as ranges since it is the default in word processors |
 
+> Note the provision or lack of spaces around the em dash is up to the publisher. 
 
 Common mistakes
 - the en dash should be used for connecting ranges such as pp. 10–15 — the problem is that compound words ("a baker-owner") use hyphens, so it is difficult to get this to autocorrect
@@ -44,7 +45,7 @@ There is a surprising amount of usage—I guess this is why word processors defa
 - as attribution  
 > “One cannot underestimate the effect a good bakery can have on a person’s well-being.” —Mabel the Cat, The Websterburg Reporter
 
-- as parenthetical material inside parentheses (" 
+- as parenthetical material inside parentheses 
 > The bakery’s reputation for scrumptious goods mbrosial, even—each item was surely fit for gods) spread far and wide.
 
 ## References
