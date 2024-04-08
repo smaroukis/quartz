@@ -12,6 +12,15 @@ math: true
 
 Here I show that the tradeoff between number of perceived brightness levels and number of multiplex elements is non-linear due to the power law for perceived brightness (requiring [gamma correction](Gamma%20Correction%20corrects%20for%20the%20human%20eye's%20non%20linear%20response%20to%20brightness%20levels.md)). In fact the limiting factor on the number of digits we can multiplex is due to both ① the number of parallel output channels and the driver chip's channel max output and ② the number of desired perceived brightness levels, with ① being in my opinion the more limiting of the two (although I need empirical experiments to conclude this).
 
+In the table below we can see, for the 10 multiplexed-digit case, if we limit the individual channel output max current to 40mA this gives us only an equivalent of 4mA of DC current, which must be further subdivided into brightness levels to be able to implement a dimming effect. The number of gamma-corrected brightness levels is 23, where level 23 represents a full 1ms of on time, and level 1 represents 1ms/23=43us of on time.[^2]
+
+| N (multiplexed elements) | Max Gamma-corrected Brightness Levels | $T_{on}$ (ms) | Duty Cycle (of refresh rate) | Required instantaneous current for 20mA DC (per channel) | Channel average current given max 40mA per channel |
+| ------------------------ | ------------------------------------- | ------------- | ---------------------------- | -------------------------------------------------------- | -------------------------------------------------- |
+| 4                        | 35                                    | 2.5           | 25%                          | 80mA                                                     | 10mA                                               |
+| 10                       | 23                                    | 1             | 10%                          | 200mA                                                    | 4mA                                                |
+| 15                       | 19                                    | 0.67          | 7%                           | 285mA                                                    | 2.8mA                                              |
+_Assuming 100Hz refresh rate, 1MHz PWM clock, 8 channel output_
+
 In summary, due to the nonlinear response of perceived brightness vs emitted intensity ($B_p \propto \sqrt[2.2]I$ w/ B=perceived brightness, I=intensity/current [^1]), if we have 8 units of time that we can divide into intensity/PWM/current, we actually only get $8^{1/2.2}\approx 2.57$ perceivable levels of brightness.
 
 ## Thorough Example 
@@ -72,3 +81,4 @@ Things to note
 - I think the limiting factor on $N_{digits}$ is the $f_{RR}$ and the minimum on-time. But note that the minimum on-time is actually very dependent on the amount of current that we push through it, so actually **the channel max current limits the number of multiplexed digits _indirectly_ through $T_{mux,min}$** — even though we noted that the channel current directly impacts the number of _segments_ (parallel outputs) and not the number of multiplexed digits.
 
 [^1]: this nth root function is similar to $\log_2 x$ but with less of a "knee"
+[^2]: I will also need to add off time for de-ghosting
