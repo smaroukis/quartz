@@ -19,9 +19,12 @@ In the table below we can see, for the 10 multiplexed-digit case, if we limit th
 | 4                        | 35                                    | 2.5           | 25%                          | 80mA                                                     | 10mA                                               |
 | 10                       | 23                                    | 1             | 10%                          | 200mA                                                    | 4mA                                                |
 | 15                       | 19                                    | 0.67          | 7%                           | 285mA                                                    | 2.8mA                                              |
-_Assuming 100Hz refresh rate, 1MHz PWM clock, 8 channel output_
 
-In summary, due to the nonlinear response of perceived brightness vs emitted intensity ($B_p \propto \sqrt[2.2]I$ w/ B=perceived brightness, I=intensity/current [^1]), if we have 8 units of time that we can divide into intensity/PWM/current, we actually only get $8^{1/2.2}\approx 2.57$ perceivable levels of brightness.
+>  _Above table assumes 100Hz refresh rate, 1MHz PWM clock, 8 channel output_
+
+
+Calculating the number of actual brightness levels from the PWM clock can be thought of as follows: 
+Due to the nonlinear response of perceived brightness vs emitted intensity ($B_p \propto \sqrt[2.2]I$ w/ B=perceived brightness, I=intensity/current [^1]), if we have 8 units of time that we can divide into intensity/PWM/current, we actually only get $8^{1/2.2}\approx 2.57$ perceivable levels of brightness. In this case we have a refresh rate of 100Hz (10ms) that is divided between the 4 digits (→ 2.5ms), which can be further divided into the PWM period yielding 2500 cycles. Then the actual number of brightness levels is $2500^{1/2.2}\approx 35$. The full explanation can be found below.
 
 ## Thorough Example 
 
