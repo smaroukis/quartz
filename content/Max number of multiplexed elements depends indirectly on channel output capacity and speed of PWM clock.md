@@ -79,9 +79,11 @@ So here is the summary of the specific case (N=10, $f_{RR}=100$, $f_{PWM}=1\text
 ## Final Thoughts 
 
 Things to note
-- number of segments doesn't really affect anything except for the current requirements (these are basically parallel outputs) → although the MCU will have to either cycle through $K_{seg}$ to check if it should be still "on" or not for the individual brightness control OR setup callback timers depending on the individual brightness levels, so it does add complexity to the serial code
-- tradeoff between $M_{perceived}$, levels of perceived brightness, and $N_{digits}$, since the more digits we have cuts into the number of PWM units we can give to each multiplex cycle. 
-- I think the limiting factor on $N_{digits}$ is the $f_{RR}$ and the minimum on-time. But note that the minimum on-time is actually very dependent on the amount of current that we push through it, so actually **the channel max current limits the number of multiplexed digits _indirectly_ through $T_{mux,min}$** — even though we noted that the channel current directly impacts the number of _segments_ (parallel outputs) and not the number of multiplexed digits.
+- although it seems like the number of segments doesn't really affect anything directly except for the current requirements, actually it will be this per channel max current along with the duty cycle and desired brightness that will determine the maximum number of multiplexed elements we can use (see bullet below)
+	- more segments could increase number of MCU cycles which has to either cycle through $K_{seg}$ to check if it should be still "on" or not for the individual brightness control OR setup callback timers depending on the individual brightness levels, so it does add complexity to the serial code (still TBD on implementation which could be done with interrupts to avoid MCU having to check each segment during each cycle)
+- there is a tradeoff between $M_{perceived}$, levels of perceived brightness, and $N_{digits}$, since the more digits we have cuts into the number of PWM units we can give to each multiplex cycle. 
+- $f_{RR}$ and the minimum desired on-time will set a limit on $N_{digits}$
+- furthermore the minimum on-time is actually very dependent on the amount of current that we push through it, so actually **the channel max current limits the number of multiplexed digits _indirectly_ through $T_{digit,min}$** — even though we noted that the channel current directly impacts the number of _segments_ (parallel outputs) and not the number of multiplexed digits, it is the duty cycle that sets $T_{digit}$ and as more multiplexed elements are added the required instantaneous channel current increases proportionally.
 
 [^1]: this nth root function is similar to $\log_2 x$ but with less of a "knee"
 [^2]: I will also need to add off time for de-ghosting
