@@ -1,5 +1,5 @@
 ---
-title: MAX7219 vs the TM1613 Seven Segment Drivers
+title: Max7219 vs TM1637 Seven Segment Drivers
 date: 2024-02-26
 description: 
 tags:

@@ -15,6 +15,9 @@ When trying to use the live expression view to look at a variable, I noticed it 
 
 Apparently the live expression viewer doesn't work for variables stored on the stack. This should be added to the list of [[traps for young players]]. Luckily I have watched the course on [Modern Embedded Programming](https://notes.maroukis.net/200-Courses/221-Modern-Embedded/C221-L13-Startup+Code+Part-1+What+is+startup+code+and+how+the+CPU+gets+from+reset+to+main+%E2%9C%85) so I know that the uninitialized global variables are stored in the `.bss` section of ROM and copied to RAM at runtime.
 
+_Update 2024-04-11_
+Similarly the variable window will only show the current function's stack frame, so this means that global variables won't show up here (since they are not even on the `main()` stack frame).
+
 See video demo below.
 
 ## Example Code
