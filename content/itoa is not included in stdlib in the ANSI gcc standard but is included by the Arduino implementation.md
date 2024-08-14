@@ -1,6 +1,6 @@
 ---
 title: itoa not included in macos gcc following POSIX and ANSI standards
-date: 2024/05-08
+date: 2024-05-09
 description: 
 tags: 
 slug: 
