@@ -1,24 +1,23 @@
 ---
-title: A biquinary counter is a mod-5 counter with a toggling top-bit every 5th count
+title: A biquinary counter was used for simplified error checking in electromechanical computers
 date: 2024-02-22
-description: 
+description: When using the 74LS90 BCD decade counter for the first time I was wondering why they had two separate counters in side, a mod-2 counter and a mod-5 counter
 tags:
   - electronics
 slug: 
 draft: false
 math: false
 ---
-
-Biquinary counting is another way to represent decimal (base-10) digits using a pair of binary (base-2) and quinary (base-5) digits. BCD counters like the 74LS90 separate out the mod-2 and mod-5 counters to allow the user to wire the counter in output modes of binary-coded-decimal counter (typical) or biquinary-coded-decimal (amongst others).
-
-#todo add video of biquinary counter leds
-
 biquinary
 **:** of, based on, being, or relating to a mixed-base system of numbers in which each decimal digit _n_ is represented as a pair of digits _xy_ where _n_ = 5 _x_ + _y_ and _x_ is written in base 2 (binary) as 0 or 1 and _y_ is written in base 5 (quinary) as 0, 1, 2, 3, or 4. 
 
-In digital electronics, this manifests as a count-to-5 3-bit counter with a 4th top bit toggling every 5th count (so two cycles of 5 counts). This can also be thought of as a decade counter. See the second heading below for the state table.
+Biquinary counting is another way to represent decimal (base-10) digits using a pair of binary (base-2) and quinary (base-5) sections. The first section represents the switch between 0-4 and 5-9 and the section represents 0-4. 
 
-| Note in digital electronics we represent the quinary (base-5) digit as a 3-bit value from `000` to `100`. In other cases the full 5 digits are used.
+This was used in relay-based computers to make error checking easier for the encoded decimal value - as seen below there must always be a single active digit in both the upper and lower sections. 
+![](attachments/Pasted%20image%2020240815172229.png)
+Moving to digital electronics, we can use just 4 bits, with the top bit being the 0-4/5-9 switch and the bottom three bits representing 0-4 (000, 001, 010, 011, 100, 101).
+
+BCD counters like the 74LS90 separate out the mod-2 and mod-5 counters to allow the user to wire the counter in output modes of binary-coded-decimal counter (typical) or biquinary-coded-decimal (amongst others).
 
 ## Standard Decade Counter with a 74LS90
 
