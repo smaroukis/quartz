@@ -12,6 +12,9 @@ math: true
 
 Inside oscilloscope probes there is a variable capacitor to compensate for the unknown capacitance of the scope's front end. We want to match this with our probe so that we get a flat response over the whole bandwidth of both devices (both the probes and the oscilloscope). The mismatch can be seen as under or overshoot when probing a square wave, but interestingly in the frequency domain we can show that the mismatch results in improper cancellation of the pole and the zero created by the two RC filters.
 
+![](attachments/Screenshot%202024-10-19%20at%208.56.57%20PM.png)
+_Above: Inside a 10:1 probe. [Source](https://wiki.analog.com/university/courses/alm1k/circuits1/alm-cir-voltage-divider)_
+
 The trick is to get $R_1C_1 = R_2C_2$. There is actually always zero at $\frac{1}{R_2C_2}$ (the pole is a bit more complicated).
 
 When $R_1C_1 \ne R_2 C_2$ then something like the following happens:
