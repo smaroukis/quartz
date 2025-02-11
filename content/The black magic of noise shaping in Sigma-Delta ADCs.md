@@ -6,7 +6,7 @@ tags:
   - electronics
   - analog-electronics
   - embedded-systems
-slug: 
+slug: noise-shaping
 draft: false
 math: true
 ---
