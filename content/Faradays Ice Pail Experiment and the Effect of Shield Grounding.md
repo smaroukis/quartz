@@ -1,6 +1,6 @@
 ---
 title: Faradays Ice Pail Experiment and the Effect of Shield Grounding
-date: 2024-01-30
+date: 2025-01-30
 description: An incomplete inquiry into shield grounding from the electrostatics point of view.
 tags:
   - electronics
