@@ -36,5 +36,7 @@ $$
 
 Then we can see that one term depends on the input `X` and other depends on the quantization noise `Q`. For $f \to 0$ the signal term goes to `X` and the Q-noise term drops out. For $f \to \infty$ the Q-noise term is all that is left. So in effect we have done some magic to push our quantization noise to higher frequencies and leave our signal in tact for lower frequencies. 
 
+Note the [MT-022](https://www.analog.com/media/en/training-seminars/tutorials/MT-022.pdf) Tutorial is an extract of the book in [1] which explains this more in depth. 
+
 
 [1] Kester, W. (Ed.). (2005). _The Data Conversion Handbook_. Newnes. ISBN 0-7506-7841-0.
