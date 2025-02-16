@@ -36,7 +36,7 @@ My added clarification:
 | ![[Til - electrostatics-1739695887417.jpeg]] | ![[Til - electrostatics-1739695934297.jpeg]] |
 
 
-P.S. I'm working on getting comments on here but in the meantime message me with comments at maroukis.net/contact.
+P.S. I'm working on getting comments on here but in the meantime message me with comments at <maroukis.net/contact>. 
 
 
 
