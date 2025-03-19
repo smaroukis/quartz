@@ -52,9 +52,9 @@ $$
 
 Where the $\frac{-Z_2}{Z_1}$ term is the one we expect for the ideal inverting amplifier. Thus the other term is an error term depending on $A_{vo}\beta$. For small values of $A_{vo}\beta$, this error term becomes less than 1, decreasing our overall gain.
 
-This shows the effects of non infinite open loop gain of the op-amp. This actually becomes important at higher frequencies for unity gain amplifiers as the open loop gain of the op-amp itself decreases and the $A_{vo}\times\beta$ starts to play more of a role. 
+This shows the effects of non infinite open loop gain of the op-amp. This actually becomes important at higher frequencies as the open loop gain of the op-amp itself decreases and the $A_{vo}\times\beta$ starts to play more of a role. 
 
-For example, the LM738 op-amp gives an open loop gain of 100dB = 100,000 at DC which is down to 60dB = 1,000 at 1kHz. For example, if $Z_2 = 100k$ and $Z_1 = 1k$ (ideal G = 100, then our error due to finite gain is around -9%. If we try to increase $G_{ideal}=\frac{Z_2}{Z_1}$ further to 1,000, we see our error increases to -50%. Thus because the open loop gain decreases at higher frequencies, the error due to finite gain increases. 
+For example, the LM738 op-amp gives an open loop gain of 100dB = 100,000 at DC which is down to 60dB = 1,000 at 1kHz. if $Z_2 = 100k$ and $Z_1 = 1k$ (ideal G = 100) then our error due to finite gain is around -9%. If we try to increase $G_{ideal}=\frac{Z_2}{Z_1}$ further to 1,000, we see our error increases to -50%! Since the open loop gain decreases at higher frequencies, the error in the closed loop gain increases. 
 
 
 ## References
