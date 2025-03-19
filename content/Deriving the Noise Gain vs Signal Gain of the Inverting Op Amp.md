@@ -33,7 +33,7 @@ But it is not clear how he separates the ideal expression from the error multipl
 For the inverting amplifier configuration, assuming no current flows into the op-amp, we can solve for the closed loop gain via superposition (see text):
 
 $$
-A_{v}=-\frac{A_{vo}Z_2/(Z_1+Z_2)}{1+[A_{vo}Z_1/(Z_1+Z_2)}
+A_{v}=-\frac{A_{vo}Z_2/(Z_1+Z_2)}{1+[A_{vo}Z_1/(Z_1+Z_2)]}
 $$
 
 ![](attachments/Screenshot%202025-03-19%20at%207.34.58%20AM.png)
